@@ -1,0 +1,13 @@
+<form (ngSubmit)="refForm.form.valid && saveBudgetMonetaryValue()" #refForm="ngForm">
+    <div class="agregar">
+        <div class="agregar_contenedor">
+            <select (change)="getTypeBudgetSelected($event)" [ngClass]="{redfocus: typeBudget === 'expenseOperation'}" class="agregar_tipo">
+              <option value="incomeOperation" selected>+</option>
+              <option value="expenseOperation">-</option>
+          </select>
+            <input [ngClass]="{redfocus: typeBudget === 'expenseOperation'}" type="text" class="agregar_descripcion" placeholder="Add description" name="descriptionBudget" [(ngModel)]="descriptionBudget" required>
+            <input type="number" [ngClass]="{redfocus: typeBudget === 'expenseOperation'}" class="agregar_valor" placeholder="Value" name="valueBudget" [(ngModel)]="valueBudget" required>
+            <button type="submit" class="agregar_btn"><i [ngClass]="{red: typeBudget === 'expenseOperation'}" class="ion-ios-checkmark-outline" ></i></button>
+        </div>
+    </div>
+</form>
