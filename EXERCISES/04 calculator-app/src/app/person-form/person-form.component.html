@@ -1,0 +1,9 @@
+<form class="item">
+    <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="nameInput" />
+
+    <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="lastnameInput" />
+    <!-- <div class="col">
+        <button type="submit" class="btn btn-primary" (click)="onAddPerson(nameInput, lastnameInput)">Agregar</button>
+    </div> -->
+    <button type="submit" (click)="onAddPerson()">+</button>
+</form>

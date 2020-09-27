@@ -1,0 +1,9 @@
+<div class="box" id="heading">
+    <h1>{{titlePersona}}</h1>
+</div>
+<div class="box">
+    <app-person *ngFor="let personElement of people; let i = index" [person]="personElement" [index]="i"></app-person>
+</div>
+<div class="box">
+    <app-person-form></app-person-form>
+</div>
